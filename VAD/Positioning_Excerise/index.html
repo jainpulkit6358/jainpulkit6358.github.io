@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>position</title>
+</head>
+<style>
+    * {
+        margin: 0px;
+        padding: 0px;
+    }
+    
+    .background {
+        background: linear-gradient(rgb(0, 0, 11), rgba(0, 7, 29, 0.4));
+        height: 100vh;
+        width: 95rem;
+        animation: day 40s infinite;
+    }
+    
+    @keyframes day {
+        0% {
+            background: linear-gradient(rgb(0, 0, 11), rgba(0, 7, 29, 0.4));
+        }
+        10% {
+            background: linear-gradient(rgba(3, 3, 33, 0.944), rgba(2, 15, 56, 0.917));
+        }
+        20% {
+            background: linear-gradient(rgba(15, 15, 81, 0.944), rgba(56, 32, 2, 0.917));
+        }
+        30% {
+            background: linear-gradient(rgba(41, 41, 144, 0.944), rgba(107, 67, 19, 0.917));
+        }
+        40% {
+            background: linear-gradient(rgba(75, 75, 171, 0.944), rgba(155, 106, 46, 0.917));
+        }
+        50% {
+            background: linear-gradient(rgba(99, 99, 175, 0.944), rgba(89, 66, 37, 0.917));
+        }
+        60% {
+            background: linear-gradient(rgba(75, 75, 171, 0.944), rgba(155, 106, 46, 0.917));
+        }
+        70% {
+            background: linear-gradient(rgba(41, 41, 144, 0.944), rgba(107, 67, 19, 0.917));
+        }
+        80% {
+            background: linear-gradient(rgba(15, 15, 81, 0.944), rgba(56, 32, 2, 0.917));
+        }
+        90% {
+            background: linear-gradient(rgba(3, 3, 33, 0.944), rgba(2, 15, 56, 0.917));
+        }
+        100% {
+            background: linear-gradient(rgba(3, 3, 33, 0.944), rgba(2, 15, 56, 0.917));
+        }
+    }
+    
+    .sun {
+        background: linear-gradient(rgba(255, 255, 0, 0.8), rgba(255, 0, 0, 0.9));
+        height: 100px;
+        width: 100px;
+        border-radius: 50%;
+        box-shadow: 2px 2px 12px rgb(red, green, blue);
+        box-shadow: 2px 5px 10px rgb(237, 4, 4);
+        position: fixed;
+        left: -100px;
+        top: 250px;
+        z-index: 1;
+        animation: sun 40s infinite;
+    }
+    
+    @keyframes sun {
+        0% {
+            left: -100px;
+            top: 250px;
+            background: linear-gradient(rgba(244, 244, 244, 0.8), rgba(255, 0, 0, 0.9));
+        }
+        10% {
+            left: -20px;
+            top: 190px;
+        }
+        20% {
+            left: 7rem;
+            top: 140px;
+        }
+        30% {
+            left: 20rem;
+            top: 100px;
+        }
+        40% {
+            left: 31rem;
+            top: 80px;
+        }
+        50% {
+            left: 45rem;
+            top: 70px;
+        }
+        60% {
+            left: 60rem;
+            top: 80px;
+        }
+        70% {
+            left: 70rem;
+            top: 100px;
+        }
+        80% {
+            left: 80rem;
+            top: 140px;
+        }
+        90% {
+            left: 90rem;
+            top: 190px;
+        }
+        100% {
+            left: 100rem;
+            top: 250px;
+        }
+    }
+    
+    .moon {
+        background: linear-gradient(rgba(180, 180, 175, 0.8), rgba(255, 255, 255, 0.9));
+        height: 100px;
+        width: 100px;
+        border-radius: 50%;
+        box-shadow: 2px 5px 10px rgb(63, 61, 61);
+        position: fixed;
+        left: 500px;
+        top: 50px;
+        z-index: 0;
+        animation: moon 40s infinite;
+    }
+    
+    @keyframes moon {
+        0% {
+            left: 45rem;
+            top: 70px;
+        }
+        10% {
+            left: 60rem;
+            top: 80px;
+        }
+        20% {
+            left: 70rem;
+            top: 100px;
+        }
+        30% {
+            left: 80rem;
+            top: 140px;
+        }
+        40% {
+            left: 90rem;
+            top: 190px;
+        }
+        50% {
+            left: 100rem;
+            top: 450px;
+        }
+        60% {
+            left: -100px;
+            top: 500px;
+        }
+        70% {
+            left: -20px;
+            top: 190px;
+        }
+        80% {
+            left: 7rem;
+            top: 140px;
+        }
+        90% {
+            left: 20rem;
+            top: 100px;
+        }
+        100% {
+            left: 500px;
+            top: 50px;
+        }
+    }
+    
+    .river {
+        background: linear-gradient(rgba(0, 255, 2, 0.9), rgba(0, 250, 250));
+        bottom: 0;
+        height: 300px;
+        width: 98rem;
+        position: absolute;
+    }
+    
+    .river img {
+        bottom: 0;
+        position: relative;
+        width: 90%;
+        height: 300px;
+    }
+    
+    .human {
+        position: absolute;
+        bottom: 90px;
+        left: 400px;
+    }
+    
+    .river .bus {
+        bottom: 120px;
+        right: 250px;
+        height: 350px;
+        width: 420px;
+        position: absolute;
+        animation: mymove 20s infinite;
+        z-index: 1;
+    }
+    
+    .hm {
+        left: 170px;
+        position: absolute;
+        z-index: 0;
+        animation: huma 20s infinite;
+    }
+    
+    @keyframes mymove {
+        0% {
+            bottom: 120px;
+            right: 250px;
+            height: 350px;
+            width: 380px;
+        }
+        10% {
+            bottom: 120px;
+            right: 250px;
+            height: 350px;
+            width: 380px;
+        }
+        20% {
+            bottom: 120px;
+            right: 250px;
+            height: 350px;
+            width: 380px;
+        }
+        30% {
+            bottom: 120px;
+            right: 250px;
+            height: 350px;
+            width: 380px;
+        }
+        40% {
+            bottom: 120px;
+            right: 250px;
+            height: 350px;
+            width: 380px;
+        }
+        60% {
+            bottom: -50px;
+            right: 650px;
+            height: 700px;
+            width: 720px;
+        }
+        100% {
+            bottom: -350px;
+            right: 120rem;
+            height: 850px;
+            width: 900px;
+        }
+    }
+    
+    @keyframes huma {
+        0% {
+            left: 170px;
+        }
+        10% {
+            left: 180px;
+        }
+        20% {
+            left: 170px;
+        }
+        30% {
+            left: 180px;
+        }
+        40% {
+            left: 170px;
+        }
+        50% {
+            left: 180px;
+        }
+        60% {
+            left: 170px;
+            bottom: 50px;
+        }
+        100% {
+            left: -1000px;
+            bottom: -130px;
+        }
+    }
+</style>
+
+<body>
+    <div class="background">
+        <div class="sun "></div>
+        <div class="moon"></div>
+        <div class="cloud">
+            <img src="img/cloud.png" alt="" style="z-index: 1;position: absolute;">
+            <img src="img/cloud.png" alt="" style="top: 50px; position: absolute;z-index: 1;left: 900px;">
+            <img src="img/cloud.png" alt="" style="top: 0px; position: absolute;z-index: 1;left: 600px;">
+        </div>
+        <div class="" style="position: relative;">
+            <img src="img/cloud.png" alt="" style="z-index: 1;position: absolute;top: 200px;">
+            <img src="img/cloud.png" alt="" style="top: 180px;position: absolute;z-index: 1;left: 400px;">
+            <img src="img/cloud.png" alt="" style="top: 200px;position: absolute;z-index: 1;left: 900px;">
+        </div>
+        <div class="river">
+            <img src="img/river.jpg" alt="">
+            <img src="img/bus.png" class="bus" alt="">
+        </div>
+        <div class="human">
+            <img src="img/human.png" class="hm" alt="">
+            <img src="img/busstop.png" alt="" style="bottom: 50px;position: relative;z-index: 0;">
+        </div>
+    </div>
+</body>
+
+</html>
