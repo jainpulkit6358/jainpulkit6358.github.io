@@ -1,0 +1,84 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+body {
+    background: linear-gradient(rgba(181, 20, 20, 0.99), rgba(23, 214, 10, 0.2), rgba(200, 200, 200, 0.5));
+    height: 100vh;
+}
+
+h1:hover {
+    color: linear-gradient(rgba(50, 50, 0, 0.5), rgba(150, 0, 0, 0.8), rgba(25, 200, 100, 0.5));
+}
+
+input {
+    background-color: rgb(185, 141, 141);
+    color: rgb(64, 10, 10);
+    font-size: 16px;
+    height: 25px;
+    width: 200px;
+}
+
+div {
+    margin-top: 50px;
+    height: 300px;
+    width: 100%;
+}
+
+h1 {
+    text-align: center;
+    font-weight: 900;
+    color: rgb(252, 255, 71);
+}
+
+form {
+    width: 500px;
+}
+
+fieldset {
+    background-color: grey;
+    border-radius: 8px;
+    border: 4px dotted rgb(172, 5, 223);
+    box-shadow: 0 40px 40px rgba(11, 6, 6, 0.46);
+}
+
+legend {
+    background-color: gold;
+    border-radius: 50px;
+    width: 190px;
+    text-align: center;
+}
+
+label {
+    font-weight: 700;
+    font-size: 19px;
+}
+
+input,
+select {
+    margin-top: 10px;
+}
+
+input:invalid+span::after {
+    content: "";
+    padding-left: 5px;
+}
+
+input:valid+span::after {
+    content: "✓";
+    padding-left: 5px;
+}
+
+.btn {
+    background-color: burlywood;
+    width: 100px;
+    height: 25px;
+    font-size: 15px;
+    font-weight: 700;
+}
+
+.btn:hover {
+    background-color: rgb(181, 3, 3);
+}
