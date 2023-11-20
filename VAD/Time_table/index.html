@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body {
+        background: linear-gradient( rgba(255, 255, 255, 0.5), rgba(170, 0, 0, 0.5));
+        height: 100vh;
+        width: 100%;
+    }
+    
+    table,
+    th,
+    td {
+        border: 1px solid rgb(255, 255, 255);
+        text-align: center;
+        background: linear-gradient(rgba(5, 50, 200, 0.2), rgba(255, 0, 200, 0.2), rgba(0, 0, 0, 0.1));
+        font-size: 20px;
+        right: 0;
+    }
+    
+    table {
+        box-shadow: 5px 5px 12px goldenrod, 4px 2px 4px rgb(13, 54, 236);
+    }
+    
+    td {
+        top: 0;
+        left: 0;
+        transition: 0.9s;
+    }
+    
+    td:hover {
+        background: linear-gradient(rgba(250, 250, 0, 0.8), rgba(0, 250, 250, 0.8));
+    }
+    
+    div {
+        margin-top: 100px;
+        color: rgb(3, 27, 58);
+    }
+</style>
+
+<body>
+    <div align="center">
+        <h1>TIME TABLE 2023</h1>
+        <table>
+            <tr>
+                <th>Day/Time</th>
+                <th>09:10-10:00</th>
+                <th>10:00-10:50</th>
+                <th>10:50-11:40</th>
+                <th>11:40-12:30</th>
+                <th>12:30-01:30</th>
+                <th>01:30-02:20</th>
+                <th>02:20-03:10</th>
+                <th>03:10-04:00</th>
+                <th>04:00-04:50</th>
+            </tr>
+
+            <tr>
+                <th>MON</th>
+                <td colspan="2">Vad <br> DIV <br>MCA LAB-II</td>
+                <td>DM <br> AGU</td>
+                <td>COA <br> SHAL</td>
+                <td rowspan="6" id="lunch">Lunch</td>
+                <td colspan="2">PSUC LAB <br> AKA/ RAB <br> MCA LAB-II</td>
+                <td>FCET <br> KOM</td>
+                <td> PSUC AKA REMEDIAL</td>
+            </tr>
+            <tr>
+                <th>TUE</th>
+                <td> PSUC AKA </td>
+                <td>DM <br> AGU</td>
+                <td colspan="2">PC LAB <br> DR. VIPIN TY + MS. JIGYASA</td>
+                <td>COA <br> SHAL</td>
+                <td>FCET <br> KOM</td>
+                <td colspan="2">QA + LR <br> MR.PAWAN <br> HS DEPTT</td>
+
+            </tr>
+            <tr>
+                <th>WED</th>
+                <td>FCET <br> KOM</td>
+                <td>COA <br> SHAL</td>
+                <td> PSUC AKA </td>
+                <td>DM <br> AGU</td>
+                <td colspan="2">PSUC LAB <br> AKA/ RAB <br> MCA LAB-II</td>
+                <td>DM <br> AGU <br>REMEDIAL</td>
+                <td bgcolor="grey"> MENTOR </td>
+
+            </tr>
+            <tr>
+                <th>THU</th>
+                <td colspan="2">Vad <br> DIV <br>MCA LAB-II</td>
+                <td colspan="2">PM&COMM <br> VIP(HS) <br>MS.ANKITA</td>
+                <td>COA <br> SHAL</td>
+                <td> PSUC AKA </td>
+
+                <td colspan="2">COA LAB <br> ANN (A1)/SHAL(A2) <br> EC DEPTT/A-201</td>
+
+            </tr>
+            <tr>
+                <th>FRI</th>
+                <td> PSUC AKA </td>
+                <td>DM <br> AGU</td>
+                <td colspan="2">PM&COMM <br> VIP(HS) <br>MS.ANKITA</td>
+                <td colspan="2">QA + LR <br> MR.PAWAN <br> HS DEPTT</td>
+                <td colspan="2">COA LAB <br> ANN (A1)/SHAL(A2) <br> EC DEPTT/A-201</td>
+
+            </tr>
+            <tr height="50">
+                <th>SAT</th>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+        </table>
+    </div>
+</body>
+
+</html>
