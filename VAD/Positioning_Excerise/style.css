@@ -168,7 +168,7 @@
         }
     }
     
-    .land {
+    .river {
         background: linear-gradient(rgba(0, 255, 2, 0.9), rgba(0, 250, 250));
         bottom: 0;
         height: 300px;
@@ -176,7 +176,7 @@
         position: absolute;
     }
     
-    .land img {
+    .river img {
         bottom: 0;
         position: relative;
         width: 90%;
@@ -189,7 +189,7 @@
         left: 400px;
     }
     
-    .land .bus {
+    .river .bus {
         bottom: 120px;
         right: 250px;
         height: 350px;
