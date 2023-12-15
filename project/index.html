@@ -1,0 +1,390 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Innovoation Center | Home</title>
+    <link rel="shortcut icon" href="img/logo.jpg" type="image/x-icon">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.min.css">
+</head>
+<style>
+    body {
+        background: linear-gradient(to top, rgba(0, 0, 0, 0.5)50%, rgba(25, 25, 25, 0.5)), url(img/logo.jpg);
+        background-attachment: fixed;
+        background-size: cover;
+        background-repeat: repeat;
+        height: 100%;
+        width: 100%;
+    }
+    
+    .icon-bar {
+        position: fixed;
+        z-index: 1;
+        top: 50%;
+        margin-top: auto;
+        -webkit-transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
+        transform: translateY(-50%);
+    }
+    /* Style the icon bar links */
+    
+    .icon-bar a {
+        display: block;
+        text-align: center;
+        padding: 16px;
+        transition: all 0.3s ease;
+        color: white;
+        font-size: 20px;
+    }
+    /* Style the social media icons with color, if you want */
+    
+    .icon-bar a:hover {
+        background-color: #000;
+    }
+    
+    .facebook {
+        background: #3B5998;
+        color: white;
+    }
+    
+    .twitter {
+        background: #55ACEE;
+        color: white;
+    }
+    
+    .google {
+        background: #dd4b39;
+        color: white;
+    }
+    
+    .linkedin {
+        background: #007bb5;
+        color: white;
+    }
+    
+    .youtube {
+        background: #bb0000;
+        color: white;
+    }
+    
+    @media screen and (min-width:993px) {
+        .dropdown:hover .dropdown-menu {
+            display: block !important;
+        }
+        .dropdown:focus .dropdown-menu {
+            display: block !important;
+        }
+        .dropdown .dropdown-menu.show {
+            display: none !important;
+        }
+    }
+    
+     ::-webkit-scrollbar {
+        width: 15px;
+    }
+    /* Track */
+    
+     ::-webkit-scrollbar-track {
+        box-shadow: inset 0 0 5px grey;
+        border-radius: 5px;
+    }
+    /* Handle */
+    
+     ::-webkit-scrollbar-thumb {
+        background: linear-gradient(rgb(0, 0, 200), rgb(255, 217, 0), rgb(250, 0, 0));
+        border-radius: 5px;
+    }
+    /* Handle on hover */
+    
+     ::-webkit-scrollbar-thumb:hover {
+        background: linear-gradient(rgb(250, 0, 0), rgb(255, 217, 0), rgb(0, 0, 200));
+    }
+</style>
+
+<body>
+    <!-- Load font awesome icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <!-- The social media icon bar -->
+    <div class="icon-bar">
+        <a href="#" class="facebook"><i class="fa fa-facebook"></i></a>
+        <a href="#" class="twitter"><i class="fa fa-twitter"></i></a>
+        <a href="#" class="google"><i class="fa fa-google"></i></a>
+        <a href="#" class="linkedin"><i class="fa fa-linkedin"></i></a>
+        <a href="#" class="youtube"><i class="fa fa-youtube"></i></a>
+    </div>
+    <div class="container-fluid">
+        <header>
+
+
+            <nav class=" navbar navbar-expand-md  mb-5 bg-warning-subtle">
+
+                <div class="container-fluid">
+
+                    <a class="navbar-brand" href="#"><img src="img/logo.jpg" style="border-radius: 50% ; height: 70px;" alt=""></a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse " id="navbarCollapse">
+                        <ul class="navbar-nav me-auto mb-2 mb-md-0">
+                            <li class="nav-item">
+                                <a class="nav-link active" aria-current="page" target="_blank" href="index.html">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" target="_blank" href="about.html">About</a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" target="_blank" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                  Our School
+                                </a>
+                                <ul class="dropdown-menu" style="width: 300px;height: auto;">
+                                    <li><a class="dropdown-item text-bg-primary fs-5" target="_blank" href="#">School of UI/UX</a></li>
+                                    <li><a class="dropdown-item text-bg-warning fs-5" target="_blank" href="#">School of AI/ML</a></li>
+                                    <li><a class="dropdown-item text-bg-danger fs-5" target="_blank" href="#">School of AR/VR</a></li>
+                                    <li><a class="dropdown-item fs-5" target="_blank " href="#">School of DRONE</a></li>
+
+
+                                </ul>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" target="_blank" href="#">Contact</a>
+                            </li>
+
+                        </ul>
+                        <form class="d-flex" role="search">
+                            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                            <button class="btn btn-outline-success" type="submit">Search</button>
+                        </form>
+                    </div>
+                </div>
+            </nav>
+        </header>
+
+        <main>
+
+
+            <!-- Slide start -->
+
+
+            <div id="myCarousel" class="carousel slide mb-5 mt-5 " data-bs-ride="carousel">
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                    <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                </div>
+                <div class="carousel-inner">
+                    <div class="carousel-item active" style="height: 2%;">
+                        <img class="w-100" style="height: 90vh;" src="img/img4.jpg" alt="">
+                        <div class="container">
+                            <div class="carousel-caption text-end">
+                                <div class="container position-relative text-bg-danger rounded-5 bg-opacity-50 aos-init aos-animate" data-aos="zoom-in" data-aos-delay="100">
+                                    <h1>Innovation<br>Center </h1>
+                                    <p><a class="btn btn-lg btn-warning" href="#">Get Started</a></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item" style="height: 2%;">
+                        <img class="w-100" style="height: 90vh;" src="img/img3.jpg" alt="">
+                        <div class="container">
+                            <div class="carousel-caption text-end">
+                                <h1>Innovation<br>Center </h1>
+                                <p><a class="btn btn-lg btn-warning" href="#">Learn more</a></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item" style="height: 2%;">
+                        <img class="w-100" style="height: 90vh;" src="img/background.jpg" alt="">
+                        <div class="container">
+                            <div class="carousel-caption text-end">
+                                <h1>Innovation<br>Center </h1>
+
+
+                                <p><a class="btn btn-lg btn-warning" href="#">Browse gallery</a></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#myCarousel" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+                    </button>
+            </div>
+
+            <!-- Our School Start -->
+
+            <style>
+
+            </style>
+            <div class="bg-white">
+                <div class="container bg-white  pb-5">
+                    <h2 class="text-center fs-1 ">Our Schools</h2>
+                    <div class="row justify-content-center">
+                        <div class="col-3 ">
+                            <img src="img/UIUX.png" class="card-img-top" style="height: 300px;width: 300px;border-radius: 50%; border: 1px solid black;" alt="...">
+                            <div class="mt-3 " style="width: 18rem; ">
+
+                                <div class="card-body ">
+                                    <h5 class="card-title ">School of UI/UX</h5>
+                                    <p class="card-text ">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                    <a href="# " class="btn btn-primary ">Go somewhere</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-3 ">
+                            <img src="img/AI.jpeg " style="height: 300px;width: 300px;border-radius: 50%; border: 1px solid black; " class="card-img-top " alt="... ">
+                            <div class="mt-3 " style="width: 18rem; ">
+
+                                <div class="card-body ">
+                                    <h5 class="card-title ">School of AI/ML</h5>
+                                    <p class="card-text ">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                    <a href="# " class="btn btn-primary ">Go somewhere</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-3 "> <img src="img/arvr.png " style="height: 300px;width: 300px;border-radius: 50%; border: 1px solid black; " class="card-img-top " alt="... ">
+                            <div class="mt-3 " style="width: 18rem; ">
+
+                                <div class="card-body ">
+                                    <h5 class="card-title ">School of AR/VR</h5>
+                                    <p class="card-text ">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                    <a href="# " class="btn btn-primary ">Go somewhere</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-3 "> <img src="img/drone.png " style="height: 300px;width: 300px;border-radius: 50%; border: 1px solid black; " class="card-img-top " alt="... ">
+                            <div class="mt-3 " style="width: 18rem; ">
+
+                                <div class="card-body ">
+                                    <h5 class="card-title ">School of DRONE</h5>
+                                    <p class="card-text ">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                    <a href="# " class="btn btn-primary ">Go somewhere</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <style>
+                .gl {
+                    border: 2px solid black;
+                    border-radius: 5px;
+                    margin-top: 2px;
+                }
+                
+                .gl a img {
+                    height: 100%;
+                }
+                
+                .row .gl a img:hover {
+                    width: 400px;
+                }
+            </style>
+
+            <!-- Gallery  Start -->
+            <div class="container-fluid ">
+                <div class="row bg-white justify-content-center pb-5 ">
+                    <h2 class="text-center fs-1 mb-5 text-success fs-1">Our Gallery</h2>
+                    <div class="row justify-content-around ">
+                        <div class="col-2 gl ">
+                            <a title="_blank" href="img/img1.jpg ">
+                                <img class="img-fluid " src="img/img1.jpg " height="230 " alt=" "></a>
+                        </div>
+                        <div class="col-2 gl ">
+                            <a title="_blank" href="img/img2.jpg ">
+                                <img class="img-fluid " src="img/img2.jpg " height="230 " alt=" "></a>
+                        </div>
+                        <div class="col-2 gl ">
+                            <a title="_blank" href="img/img3.jpg ">
+                                <img class="img-fluid " src="img/img3.jpg " height="230 " alt=" "></a>
+                        </div>
+                        <div class="col-2 gl ">
+                            <a title="_blank" href=" ">
+                                <img class="img-fluid " src="img/img4.jpg " height="230 " alt=" "></a>
+                        </div>
+                    </div>
+                    <div class="row justify-content-around ">
+                        <div class="col-2 gl ">
+                            <a title="_blank" href=" ">
+                                <img class="img-fluid " src="img/img5.jpg " height="230 " alt=" "></a>
+                        </div>
+                        <div class="col-2 gl ">
+                            <a title="_blank" href=" ">
+                                <img class="img-fluid " src="img/img6.jpg " height="230 " alt=" "></a>
+                        </div>
+                        <div class="col-2 gl ">
+                            <a title="_blank" href=" ">
+                                <img class="img-fluid " src="img/background.jpg " height="230 " alt=" "></a>
+                        </div>
+                        <div class="col-2 gl ">
+                            <a title="_blank" href=" ">
+                                <img class="img-fluid " src="img/background2.jpg " height="230 " alt=" "></a>
+                        </div>
+                    </div>
+                    <div class="row justify-content-around ">
+
+                        <div class="col-2 gl ">
+                            <a title="_blank" href=" ">
+                                <img class="img-fluid " src="img/background3.jpg " height="230 " alt=" "></a>
+                        </div>
+                        <div class="col-2 gl ">
+                            <a title="_blank" href=" ">
+                                <img class="img-fluid " src="img/background4.jpg " height="230 " alt=" "></a>
+                        </div>
+                        <div class="col-2 gl ">
+                            <a title="_blank" href=" ">
+                                <img class="img-fluid " src=" img/logo.jpg" height="230 " alt=" "></a>
+                        </div>
+                        <div class="col-2 gl ">
+                            <a title="_blank" href=" ">
+                                <img class="img-fluid " src=" img/img1.jpg" height="230 " alt=" "></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Footerv start -->
+
+
+
+
+
+            <div class="row bg-white">
+                <footer class="py-3 my-4">
+                    <div class="row text-bg-warning justify-content-around">
+                        <div class="col-3" style="text-align: center;font-size:22px"> <a href=""><i class="fa fa-twitter"></i></a>
+                            <a href=""><i class="fa fa-facebook"></i></a>
+                            <a href=""><i class="fa fa-youtube"></i></a>
+                            <a href=""><i class="fa fa-linkedin"></i></a>
+                        </div>
+                        <div class="col-4 mt-1 " style="text-align: center;">
+                            <ul class="nav justify-content-center border-bottom pb-3 mb-3">
+                                <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">Home</a></li>
+                                <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">About</a></li>
+                                <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">Our School</a></li>
+                                <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">Contact</a></li>
+                                <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">Log IN</a></li>
+                            </ul>
+                        </div>
+
+                        <div class="col-3 mt-1" style="text-align: center;">
+                            <p class=""><i class="fa fa-envelope"></i><a href="" style="text-decoration: none;">KIET INNOVATION CENTRE</a></p>
+                        </div>
+                    </div>
+
+                    <p class="text-center text-body-secondary">&copy; 2023 Innovation center</p>
+                </footer>
+            </div>
+        </main>
+    </div>
+    <script src="js/bootstrap.bundle.min.js"></script>
+
+</body>
+
+</html>
