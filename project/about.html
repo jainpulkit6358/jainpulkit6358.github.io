@@ -1,0 +1,235 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>About</title>
+    <link rel="canonical" href="https://getbootstrap.com/docs/5.3/examples/navbar-fixed/">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@docsearch/css@3">
+    <link rel="shortcut icon" href="img/logo.jpg" type="image/x-icon">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<style>
+    body {
+        background: linear-gradient(to top, rgba(0, 0, 0, 0.5)50%, rgba(25, 25, 25, 0.5)), url(img/logo.jpg);
+        background-attachment: fixed;
+        background-size: cover;
+        background-repeat: repeat;
+        height: 100%;
+        width: 100%;
+    }
+    
+    .icon-bar {
+        position: fixed;
+        z-index: 1;
+        top: 50%;
+        margin-top: auto;
+        -webkit-transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
+        transform: translateY(-50%);
+    }
+    /* Style the icon bar links */
+    
+    .icon-bar a {
+        display: block;
+        text-align: center;
+        padding: 16px;
+        transition: all 0.3s ease;
+        color: white;
+        font-size: 20px;
+    }
+    /* Style the social media icons with color, if you want */
+    
+    .icon-bar a:hover {
+        background-color: #000;
+    }
+    
+    .facebook {
+        background: #3B5998;
+        color: white;
+    }
+    
+    .twitter {
+        background: #55ACEE;
+        color: white;
+    }
+    
+    .google {
+        background: #dd4b39;
+        color: white;
+    }
+    
+    .linkedin {
+        background: #007bb5;
+        color: white;
+    }
+    
+    .youtube {
+        background: #bb0000;
+        color: white;
+    }
+    
+    @media screen and (min-width:993px) {
+        .dropdown:hover .dropdown-menu {
+            display: block !important;
+        }
+        .dropdown:focus .dropdown-menu {
+            display: block !important;
+        }
+        .dropdown .dropdown-menu.show {
+            display: none !important;
+        }
+    }
+    
+     ::-webkit-scrollbar {
+        width: 15px;
+    }
+    /* Track */
+    
+     ::-webkit-scrollbar-track {
+        box-shadow: inset 0 0 5px grey;
+        border-radius: 5px;
+    }
+    /* Handle */
+    
+     ::-webkit-scrollbar-thumb {
+        background: linear-gradient(rgb(0, 0, 200), rgb(255, 217, 0), rgb(250, 0, 0));
+        border-radius: 5px;
+    }
+    /* Handle on hover */
+    
+     ::-webkit-scrollbar-thumb:hover {
+        background: linear-gradient(rgb(250, 0, 0), rgb(255, 217, 0), rgb(0, 0, 200));
+    }
+</style>
+
+<body>
+    <!-- Load font awesome icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <!-- The social media icon bar -->
+    <div class="icon-bar">
+        <a href="#" class="facebook"><i class="fa fa-facebook"></i></a>
+        <a href="#" class="twitter"><i class="fa fa-twitter"></i></a>
+        <a href="#" class="google"><i class="fa fa-google"></i></a>
+        <a href="#" class="linkedin"><i class="fa fa-linkedin"></i></a>
+        <a href="#" class="youtube"><i class="fa fa-youtube"></i></a>
+    </div>
+    <div class="container-fluid">
+        <header>
+            <div class="row text-bg-warning justify-content-around">
+                <div class="col-3" style="text-align: center;font-size:22px"> <a href=""><i class="fa fa-twitter"></i></a>
+                    <a href=""><i class="fa fa-facebook"></i></a>
+                    <a href=""><i class="fa fa-youtube"></i></a>
+                    <a href=""><i class="fa fa-linkedin"></i></a>
+                </div>
+                <div class="col-3 mt-1 " style="text-align: center;">
+                    <p class="text-white"><i class="fa fa-map-marker fs-4"></i><a href="https://maps.app.goo.gl/5caKbmNwFDZUDA2m8" style="text-decoration: none;">Innovation center</a></p>
+                </div>
+                <div class="col-3 mt-1" style="text-align: center;">
+
+                </div>
+                <div class="col-3 mt-1" style="text-align: center;">
+                    <p class=""><i class="fa fa-envelope"></i><a href="" style="text-decoration: none;">KIET INNOVATION CENTRE</a></p>
+                </div>
+            </div>
+            <nav class=" navbar navbar-expand-md  mb-2 bg-warning-subtle">
+
+                <div class="container-fluid">
+
+                    <a class="navbar-brand" href="#"><img src="img/logo.jpg" style="border-radius: 50% ; height: 70px;" alt=""></a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse " id="navbarCollapse">
+                        <ul class="navbar-nav me-auto mb-2 mb-md-0">
+                            <li class="nav-item">
+                                <a class="nav-link active" aria-current="page" target="_blank" href="index.html">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" target="_blank" href="about.html">About</a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" target="_blank" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                  Our School
+                                </a>
+                                <ul class="dropdown-menu ">
+                                    <li><a class="dropdown-item text-bg-primary" target="_blank" href="#">School of UI/UX</a></li>
+                                    <li><a class="dropdown-item text-bg-warning" target="_blank" href="#">School of AI/ML</a></li>
+                                    <li><a class="dropdown-item text-bg-danger" target="_blank" href="#">School of AR/VR</a></li>
+                                    <li><a class="dropdown-item" target="_blank" href="#">School of DRONE</a></li>
+
+
+                                </ul>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" target="_blank" href="contact.html">Contact</a>
+                            </li>
+                        </ul>
+                        <form class="d-flex" role="search">
+                            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                            <button class="btn btn-outline-success" type="submit">Search</button>
+                        </form>
+                    </div>
+                </div>
+            </nav>
+        </header>
+        <!-- About Start -->
+        <main>
+            <div class="bg-white about">
+                <h1 class="text-center">About</h1>
+            </div>
+            <div class="container bg-white">
+                <h1>About Innovation Center </h1>
+                <p>Innovation Center is a reputed institution that provides world-class education to students from various parts of the country. Our mission is to foster an environment where every student feels loved, valued, and empowered to reach their
+                    full potential.
+                </p>
+
+                <h2>Our Values</h2>
+                <ul>
+                    <li>Respect for self and others</li>
+                    <li>Innovation and creativity</li>
+                    <li>Commitment to excellence</li>
+                    <li>Teamwork and collaboration</li>
+                </ul>
+
+                <h2>Our Approach</h2>
+                <p>At Innovation Center , we follow a unique teaching approach that focuses on enhancing students' overall well-being and fostering critical thinking skills. Our approach includes:</p>
+                <ul>
+                    <li>Engaging, hands-on, and experiential learning opportunities</li>
+                    <li>Supportive and nurturing classroom environment</li>
+                    <li>Comprehensive guidance and counseling services</li>
+                    <li>Encouragement of healthy competition and participation in co-curricular activities</li>
+                </ul>
+
+                <h2>Why Choose Innovation Center ?</h2>
+                <p>We provide a holistic education that caters to the diverse needs of our students. Some of the reasons why students choose Innovation Center are:</p>
+                <ul>
+                    <li>Top-notch faculty and teaching staff</li>
+                    <li>Modern and spacious classrooms with state-of-the-art facilities</li>
+                    <li>Comprehensive curriculum that includes various subjects, sports, and co-curricular activities</li>
+                    <li>Emphasis on developing the whole person: academically, physically, socially, and emotionally</li>
+                    <li>Achievement of success at the regional, national, and international levels</li>
+                </ul>
+            </div>
+    </div>
+    <!-- Footerv start -->
+    <div class="row bg-white">
+        <footer class="py-3 my-4">
+            <ul class="nav justify-content-center border-bottom pb-3 mb-3">
+                <li class="nav-item"><a href="index.html" class="nav-link px-2 text-body-secondary">Home</a></li>
+                <li class="nav-item"><a href="about.html" class="nav-link px-2 text-body-secondary">About</a></li>
+                <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">Our School</a></li>
+                <li class="nav-item"><a href="contact.html" class="nav-link px-2 text-body-secondary">Contact</a></li>
+            </ul>
+            <p class="text-center text-body-secondary">&copy; 2023 Innovation center</p>
+        </footer>
+    </div>
+    </main>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+</body>
+
+</html>
