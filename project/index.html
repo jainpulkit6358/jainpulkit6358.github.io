@@ -150,7 +150,7 @@
                                 </ul>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" target="_blank" href="#">Contact</a>
+                                <a class="nav-link" target="_blank" href="contact.html">Contact</a>
                             </li>
 
                         </ul>
@@ -169,7 +169,7 @@
             <!-- Slide start -->
 
 
-            <div id="myCarousel" class="carousel slide mb-5 mt-5 " data-bs-ride="carousel">
+            <div id="myCarousel" class="carousel slide mb-5  " data-bs-ride="carousel">
                 <div class="carousel-indicators">
                     <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
                     <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
@@ -276,23 +276,24 @@
                 .gl {
                     border: 2px solid black;
                     border-radius: 5px;
-                    margin-top: 2px;
+                    margin: 19px;
                 }
                 
                 .gl a img {
                     height: 100%;
+                    transition: 0.5s;
                 }
                 
-                .row .gl a img:hover {
-                    width: 400px;
+                .gl:hover {
+                    background: url(img/logo.jpg);
                 }
             </style>
 
             <!-- Gallery  Start -->
-            <div class="container-fluid ">
-                <div class="row bg-white justify-content-center pb-5 ">
+            <div class="container-fluid bg-white">
+                <div class="row bg-white  pb-5 ">
                     <h2 class="text-center fs-1 mb-5 text-success fs-1">Our Gallery</h2>
-                    <div class="row justify-content-around ">
+                    <div class="row justify-content-evenly  ">
                         <div class="col-2 gl ">
                             <a title="_blank" href="img/img1.jpg ">
                                 <img class="img-fluid " src="img/img1.jpg " height="230 " alt=" "></a>
@@ -310,7 +311,7 @@
                                 <img class="img-fluid " src="img/img4.jpg " height="230 " alt=" "></a>
                         </div>
                     </div>
-                    <div class="row justify-content-around ">
+                    <div class="row justify-content-evenly ">
                         <div class="col-2 gl ">
                             <a title="_blank" href=" ">
                                 <img class="img-fluid " src="img/img5.jpg " height="230 " alt=" "></a>
@@ -328,7 +329,7 @@
                                 <img class="img-fluid " src="img/background2.jpg " height="230 " alt=" "></a>
                         </div>
                     </div>
-                    <div class="row justify-content-around ">
+                    <div class="row justify-content-evenly ">
 
                         <div class="col-2 gl ">
                             <a title="_blank" href=" ">
@@ -349,6 +350,38 @@
                     </div>
                 </div>
             </div>
+
+            <!-- Contact Start -->
+            <div class="row justify-content-evenly pt-2 pb-5" style="background-color: #f1f1f1;">
+                <div class="col-md-5 mt-5">
+                    <h3 class="mb-3">Contact Us</h3>
+
+                    <form>
+                        <div class="mb-3">
+                            <label for="name" class="form-label">Full Name</label>
+                            <input type="text" class="form-control" id="name">
+
+                        </div>
+                        <div class="mb-3">
+                            <label for="exampleInputEmail1" class="form-label">Email address</label>
+                            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                            <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="exampleFormControlTextarea1" class="form-label">Messsage</label>
+                            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                        </div>
+
+                        <button type="submit" class="btn btn-success">Submit</button>
+                    </form>
+                </div>
+                <div class="col-md-5 mt-5">
+
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d437.23596822746157!2d77.49714342310307!3d28.75276832549697!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390cf5d42e6435ad%3A0xe29e36cf867369e6!2sA%20Block!5e0!3m2!1sen!2sin!4v1702698959339!5m2!1sen!2sin"
+                        width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </div>
+
             <!-- Footerv start -->
 
 
@@ -365,11 +398,10 @@
                         </div>
                         <div class="col-4 mt-1 " style="text-align: center;">
                             <ul class="nav justify-content-center border-bottom pb-3 mb-3">
-                                <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">Home</a></li>
-                                <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">About</a></li>
+                                <li class="nav-item"><a href="index.html" class="nav-link px-2 text-body-secondary">Home</a></li>
+                                <li class="nav-item"><a href="about.html" class="nav-link px-2 text-body-secondary">About</a></li>
                                 <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">Our School</a></li>
-                                <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">Contact</a></li>
-                                <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">Log IN</a></li>
+                                <li class="nav-item"><a href="contact.html" class="nav-link px-2 text-body-secondary">Contact</a></li>
                             </ul>
                         </div>
 
