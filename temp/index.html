@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Temp</title>
+</head>
+<body>
+    <input type="number" name="" id="temp">
+    <select name="" id="sl">
+        <option value="select">------Select</option>
+        <option value="c">celsius</option>
+        
+     s   <option value="f">fahrenheit</option>
+    </select>
+    <input type="button" value="result" onclick="fun()">
+    <input type="number" name="" id="result" disabled>
+    <script>
+       
+    
+        function fun(){
+            var text = document.getElementById('temp').value;
+            var opt=document.getElementById('sl').value;
+     var res =text;
+if(opt=='c'){
+    var result = (res - 32) * (5/9);
+    parseFloat(document.getElementById('result').value = result);
+}
+else if(opt=='f'){
+    var result = (9/5)*res + 32.
+    parseFloat(document.getElementById('result').value = result);
+}
+else{
+    document.getElementById('result').value = null;
+}
+    
+        }
+        
+        
+    </script>
+</body>
+</html>
