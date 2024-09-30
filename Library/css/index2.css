@@ -1,0 +1,53 @@
+/* General Layout */
+body {
+    font-family: 'Arial', sans-serif;
+}
+
+.sidebar {
+    height: 100vh;
+    position: fixed;
+}
+
+.navbar-brand {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.card {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.card-body {
+    font-size: 1.2rem;
+}
+
+.card-footer a {
+    font-weight: bold;
+}
+
+/* Content Spacing */
+main {
+    margin-left: 250px;
+    padding: 20px;
+}
+
+.card {
+    margin-bottom: 20px;
+}
+
+/* Sidebar Links */
+.sidebar .nav-link {
+    font-size: 1.1rem;
+    padding: 10px 20px;
+    margin-bottom: 10px;
+    display: block;
+}
+
+.sidebar .nav-link i {
+    margin-right: 10px;
+}
+
+.sidebar .nav-link:hover {
+    background-color: #007bff;
+    color: white;
+}
