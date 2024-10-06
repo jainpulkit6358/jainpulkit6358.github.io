@@ -3,164 +3,145 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Library Management System</title>
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <title>Library Management System Dashboard</title>
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome 6 CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
     <!-- Custom CSS -->
     <link rel="stylesheet" href="css/index2.css">
 </head>
 <body>
 
     <!-- Top Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-warning">
-        <a class="navbar-brand text-white" href="#">Library</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav ml-auto">
-                <li class="nav-item active">
-                    <a class="nav-link text-white" href="#">Dashboard</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link text-white" href="#">Admin</a>
-                </li>
-            </ul>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary ">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#"> Library</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="admin.html"><i class="fas fa-user"></i> Admin</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="#">Dashboard</a>
+                    </li>
+                </ul>
+            </div>
         </div>
     </nav>
 
-    <!-- Main Container -->
+    <!-- Sidebar and Dashboard Content -->
     <div class="container-fluid">
         <div class="row">
             <!-- Sidebar -->
-            <nav id="sidebar" class="col-md-2 d-none d-md-block bg-dark sidebar">
-                <div class="sidebar-sticky">
-                    <ul class="nav flex-column">
-                        <li class="nav-item">
-                            <a class="nav-link text-white" href="#">
-                                <i class="fas fa-tachometer-alt"></i>
-                                Dashboard
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-white" href="#">
-                                <i class="fas fa-user"></i>
-                                Members
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-white" href="#">
-                                <i class="fas fa-book"></i>
-                                Books
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-white" href="#">
-                                <i class="fas fa-newspaper"></i>
-                                Newspapers
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-white" href="#">
-                                <i class="fas fa-receipt"></i>
-                                Issued
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-white" href="#">
-                                <i class="fas fa-thumbs-up"></i>
-                                Returned
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-white" href="#">
-                                <i class="fas fa-thumbs-down"></i>
-                                Not Returned
-                            </a>
-                        </li>
-                    </ul>
-                </div>
+            <nav id="sidebar" class="col-md-2 bg-dark sidebar d-flex flex-column ">
+                <ul class="nav flex-column ">
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="#"><i class="fas fa-tachometer-alt me-2"></i> Dashboard</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="#"><i class="fas fa-users me-2"></i> Members</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="#"><i class="fas fa-book me-2"></i> Books</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="#"><i class="fas fa-newspaper me-2"></i> Newspapers</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="#"><i class="fas fa-book-open me-2"></i> Magazines</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="#"><i class="fas fa-receipt me-2"></i> Issued</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="#"><i class="fas fa-thumbs-up me-2"></i> Returned</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="#"><i class="fas fa-thumbs-down me-2"></i> Not Returned</a>
+                    </li>
+                </ul>
             </nav>
 
             <!-- Dashboard Content -->
-            <main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-4">
+            <main class="col-md-10 ms-sm-auto col-lg-10 px-md-4">
                 <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
                     <h1 class="h2">Dashboard</h1>
                 </div>
 
-                <!-- Content Boxes -->
+                <!-- Dashboard Cards -->
                 <div class="row">
-                    <div class="col-md-3">
-                        <div class="card bg-info text-white mb-4">
-                            <div class="card-body">Books</div>
-                            <div class="card-footer d-flex align-items-center justify-content-between">
-                                <a class="small text-white stretched-link" href="#">View Details</a>
-                                <div class="small text-white"><i class="fas fa-arrow-right"></i></div>
+                    <div class="col-md-3 mb-3">
+                        <div class="card bg-secondary    text-white h-100">
+                            <div class="card-body">
+                                <h5 class="card-title">Books</h5>
+                                <p class="card-text">3 Books Available</p>
+                            </div>
+                            <div class="card-footer">
+                                <a href="#" class="text-white">More secondary  <i class="fas fa-arrow-right"></i></a>
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-3">
-                        <div class="card bg-success text-white mb-4">
-                            <div class="card-body">Members</div>
-                            <div class="card-footer d-flex align-items-center justify-content-between">
-                                <a class="small text-white stretched-link" href="#">View Details</a>
-                                <div class="small text-white"><i class="fas fa-arrow-right"></i></div>
+                    <div class="col-md-3 mb-3">
+                        <div class="card bg-success  text-white h-100">
+                            <div class="card-body">
+                                <h5 class="card-title">Members</h5>
+                                <p class="card-text">2 Members Registered</p>
+                            </div>
+                            <div class="card-footer">
+                                <a href="#" class="text-white">More secondary  <i class="fas fa-arrow-right"></i></a>
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-3">
-                        <div class="card bg-warning text-white mb-4">
-                            <div class="card-body">Newspapers</div>
-                            <div class="card-footer d-flex align-items-center justify-content-between">
-                                <a class="small text-white stretched-link" href="#">View Details</a>
-                                <div class="small text-white"><i class="fas fa-arrow-right"></i></div>
+                    <div class="col-md-3 mb-3">
+                        <div class="card bg-primary  text-white h-100">
+                            <div class="card-body">
+                                <h5 class="card-title">Newspapers</h5>
+                                <p class="card-text">1 Newspaper Available</p>
+                            </div>
+                            <div class="card-footer">
+                                <a href="#" class="text-white">More secondary  <i class="fas fa-arrow-right"></i></a>
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-3">
-                        <div class="card bg-danger text-white mb-4">
-                            <div class="card-body">Magazines</div>
-                            <div class="card-footer d-flex align-items-center justify-content-between">
-                                <a class="small text-white stretched-link" href="#">View Details</a>
-                                <div class="small text-white"><i class="fas fa-arrow-right"></i></div>
+                    <div class="col-md-3 mb-3">
+                        <div class="card bg-danger  text-white h-100">
+                            <div class="card-body">
+                                <h5 class="card-title">Magazines</h5>
+                                <p class="card-text">0 Magazines Available</p>
+                            </div>
+                            <div class="card-footer">
+                                <a href="#" class="text-white">More secondary  <i class="fas fa-arrow-right"></i></a>
                             </div>
                         </div>
                     </div>
                 </div>
 
-                <!-- Additional Sections -->
+                <!-- Additional Section -->
                 <div class="row">
-                    <div class="col-md-6">
+                    <div class="col-md-6 mb-3">
                         <div class="card">
-                            <div class="card-header">
-                                Issued Books
-                            </div>
-                            <div class="card-body">
-                                2 books have been issued.
-                            </div>
+                            <div class="card-header">Issued Books</div>
+                            <div class="card-body">2 books have been issued.</div>
                         </div>
                     </div>
-                    <div class="col-md-6">
+                    <div class="col-md-6 mb-3">
                         <div class="card">
-                            <div class="card-header">
-                                Returned Books
-                            </div>
-                            <div class="card-body">
-                                1 book has been returned.
-                            </div>
+                            <div class="card-header">Returned Books</div>
+                            <div class="card-body">1 book has been returned.</div>
                         </div>
                     </div>
                 </div>
-
             </main>
         </div>
     </div>
 
-    <!-- Bootstrap JS and dependencies -->
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.0.6/dist/umd/popper.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <!-- Bootstrap 5 JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
     <!-- Font Awesome -->
-    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js"></script>
 </body>
 </html>
