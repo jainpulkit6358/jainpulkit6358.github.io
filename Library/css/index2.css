@@ -1,6 +1,8 @@
 /* General Layout */
 body {
     font-family: 'Arial', sans-serif;
+    background: linear-gradient(90deg, rgba(177,176,195,1) 5%, rgba(122, 122, 189, 0.782) 50%, rgba(0,212,255,1) 100%);
+
 }
 
 .sidebar {
@@ -27,7 +29,7 @@ body {
 
 /* Content Spacing */
 main {
-    margin-left: 250px;
+    margin-left: 220px;
     padding: 20px;
 }
 
@@ -51,3 +53,6 @@ main {
     background-color: #007bff;
     color: white;
 }
+
+
+/* LOGIN */
