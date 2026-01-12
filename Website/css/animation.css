@@ -1,0 +1,178 @@
+/* @import url('https://fonts.googleapis.com/css?family=Source+Code+Pro:200,900');
+:root {
+  --text-color: rgb(255, 255, 255);
+  --shadow-color: hsla(210, 40%, 52%, .4);
+  --btn-color: rgb(0, 0, 0);
+  --bg-color: blueviolet;
+}
+button {
+  position:relative;
+ 
+
+  cursor: pointer;
+
+  font-family: "Source Code Pro";
+  font-weight: 700;
+  text-transform: uppercase;
+
+  color: var(--text-color);
+  
+  background-color: var(--btn-color);
+  box-shadow: var(--shadow-color) 2px 2px 22px;
+  border-radius: 4px; 
+  z-index: 0;  
+  overflow: hidden;   
+}
+
+button:focus {
+  outline-color: transparent;
+  box-shadow: var(--btn-color) 2px 2px 22px;
+}
+
+.right::after, button::after {
+  content: var(--content);
+  display: block;
+  position: absolute;
+  white-space: nowrap;
+  padding: 40px 40px;
+  pointer-events:none;
+}
+
+button::after{
+  font-weight: 200;
+  top: -30px;
+  left: -20px;
+} 
+
+.right, .left {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+}
+.right {
+  left: 66%;
+}
+.left {
+  right: 66%;
+}
+.right::after {
+  top: -30px;
+  left: calc(-66% - 20px);
+  
+  background-color: var(--bg-color);
+  color:transparent;
+  transition: transform .4s ease-out;
+  transform: translate(0, -90%) rotate(0deg)
+}
+
+button:hover .right::after {
+  transform: translate(0, -47%) rotate(0deg)
+}
+
+button .right:hover::after {
+  transform: translate(0, -50%) rotate(-7deg)
+}
+
+button .left:hover ~ .right::after {
+  transform: translate(0, -50%) rotate(7deg)
+}
+
+button::before {
+  content: '';
+  pointer-events: none;
+  opacity: .6;
+  background:
+    radial-gradient(circle at 20% 35%,  transparent 0,  transparent 2px, var(--text-color) 3px, var(--text-color) 4px, transparent 4px),
+    radial-gradient(circle at 75% 44%, transparent 0,  transparent 2px, var(--text-color) 3px, var(--text-color) 4px, transparent 4px),
+    radial-gradient(circle at 46% 52%, transparent 0, transparent 4px, var(--text-color) 5px, var(--text-color) 6px, transparent 6px);
+
+  width: 100%;
+  height: 300%;
+  top: 0;
+  left: 0;
+  position: absolute;
+  animation: bubbles 5s linear infinite both;
+}
+@keyframes bubbles {
+  from {
+    transform: translate();
+  }
+  to {
+    transform: translate(0, -66.666%);
+  }
+} */
+
+
+.animated-card {
+    border: none;
+    overflow: hidden;
+}
+
+/* Image wrapper */
+.overlay-wrap {
+    position: relative;
+    overflow: hidden;
+}
+
+/* Image animation */
+.overlay-wrap img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    transition: transform 0.6s ease;
+}
+
+/* Overlay */
+.overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        to right,
+        rgba(0,0,0,0.85),
+        rgba(0,0,0,0.4)
+    );
+    opacity: 0;
+    transition: opacity 0.4s ease;
+}
+
+/* Overlay content */
+.overlay-content {
+    position: absolute;
+    left: -100%;
+    top: 50%;
+    transform: translateY(-50%);
+    color: white;
+    padding: 20px;
+    transition: left 0.6s ease;
+}
+
+/* Hover effects */
+.overlay-wrap:hover img {
+    transform: scale(1.1);
+}
+
+.overlay-wrap:hover .overlay {
+    opacity: 1;
+}
+
+.overlay-wrap:hover .overlay-content {
+    left: 0;
+}
+
+/* Button */
+.btn-view {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 6px 14px;
+    border: 1px solid #fff;
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+.btn-view:hover {
+    background: white;
+    color: black;
+}
