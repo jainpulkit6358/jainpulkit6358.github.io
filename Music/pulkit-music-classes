@@ -1,0 +1,1372 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Pulkit Music Class | Learn Piano Online</title>
+
+<meta name="description" content="Learn piano online with Pulkit Music Class. Beginner-friendly piano lessons with flexible online classes.">
+
+<style>
+
+/* =========================================================
+   RESET
+========================================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #ffffff;
+    color: #111111;
+    overflow-x: hidden;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+button {
+    font-family: inherit;
+}
+
+
+/* =========================================================
+   CUSTOM CURSOR
+========================================================= */
+
+.cursor {
+    position: fixed;
+    width: 12px;
+    height: 12px;
+    background: #111;
+    border-radius: 50%;
+    pointer-events: none;
+    z-index: 9999;
+    transform: translate(-50%, -50%);
+    transition: transform .15s ease, width .25s ease, height .25s ease;
+}
+
+.cursor-ring {
+    position: fixed;
+    width: 38px;
+    height: 38px;
+    border: 1px solid rgba(0,0,0,.35);
+    border-radius: 50%;
+    pointer-events: none;
+    z-index: 9998;
+    transform: translate(-50%, -50%);
+    transition: all .15s ease;
+}
+
+body.cursor-hover .cursor {
+    width: 5px;
+    height: 5px;
+}
+
+body.cursor-hover .cursor-ring {
+    width: 60px;
+    height: 60px;
+}
+
+
+/* =========================================================
+   NAVBAR
+========================================================= */
+
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 78px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 6vw;
+    z-index: 1000;
+    background: rgba(255,255,255,.72);
+    backdrop-filter: blur(15px);
+    border-bottom: 1px solid rgba(0,0,0,.06);
+}
+
+.logo {
+    font-size: 20px;
+    font-weight: 700;
+    letter-spacing: -0.5px;
+}
+
+.logo span {
+    font-weight: 400;
+    opacity: .5;
+}
+
+.nav-links {
+    display: flex;
+    gap: 30px;
+    font-size: 14px;
+}
+
+.nav-links a {
+    position: relative;
+}
+
+.nav-links a::after {
+    content: "";
+    position: absolute;
+    bottom: -6px;
+    left: 0;
+    width: 0;
+    height: 1px;
+    background: #111;
+    transition: width .3s ease;
+}
+
+.nav-links a:hover::after {
+    width: 100%;
+}
+
+.nav-button {
+    padding: 11px 20px;
+    border: 1px solid #111;
+    border-radius: 50px;
+    font-size: 13px;
+    transition: .3s;
+}
+
+.nav-button:hover {
+    background: #111;
+    color: #fff;
+}
+
+
+/* =========================================================
+   HERO
+========================================================= */
+
+.hero {
+    min-height: 100vh;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    padding: 120px 6vw 80px;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 5;
+    text-align: center;
+    max-width: 900px;
+}
+
+.eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    margin-bottom: 30px;
+    opacity: .6;
+}
+
+.eyebrow::before {
+    content: "";
+    width: 28px;
+    height: 1px;
+    background: #111;
+}
+
+.hero h1 {
+    font-size: clamp(55px, 10vw, 145px);
+    line-height: .86;
+    letter-spacing: -7px;
+    font-weight: 800;
+}
+
+.hero h1 .outline {
+    color: transparent;
+    -webkit-text-stroke: 1.5px #111;
+}
+
+.hero-description {
+    max-width: 450px;
+    margin: 35px auto;
+    font-size: 15px;
+    line-height: 1.7;
+    color: #666;
+}
+
+.hero-actions {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    margin-top: 25px;
+}
+
+.primary-btn {
+    padding: 15px 28px;
+    background: #111;
+    color: #fff;
+    border-radius: 50px;
+    font-size: 13px;
+    transition: transform .3s, box-shadow .3s;
+}
+
+.primary-btn:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 15px 35px rgba(0,0,0,.18);
+}
+
+.secondary-btn {
+    padding: 15px 28px;
+    border: 1px solid #ddd;
+    border-radius: 50px;
+    font-size: 13px;
+    transition: .3s;
+}
+
+.secondary-btn:hover {
+    border-color: #111;
+}
+
+
+/* =========================================================
+   FLOATING NOTES
+========================================================= */
+
+.note {
+    position: absolute;
+    font-size: 35px;
+    color: rgba(0,0,0,.08);
+    animation: floatNote linear infinite;
+    user-select: none;
+}
+
+.note-1 {
+    top: 20%;
+    left: 12%;
+    animation-duration: 7s;
+}
+
+.note-2 {
+    top: 65%;
+    left: 20%;
+    animation-duration: 9s;
+}
+
+.note-3 {
+    top: 25%;
+    right: 13%;
+    animation-duration: 8s;
+}
+
+.note-4 {
+    bottom: 15%;
+    right: 22%;
+    animation-duration: 10s;
+}
+
+@keyframes floatNote {
+
+    0% {
+        transform: translateY(30px) rotate(0deg);
+        opacity: 0;
+    }
+
+    30% {
+        opacity: 1;
+    }
+
+    70% {
+        opacity: .5;
+    }
+
+    100% {
+        transform: translateY(-120px) rotate(25deg);
+        opacity: 0;
+    }
+}
+
+
+/* =========================================================
+   ORBIT
+========================================================= */
+
+.orbit {
+    position: absolute;
+    width: 500px;
+    height: 500px;
+    border: 1px solid rgba(0,0,0,.07);
+    border-radius: 50%;
+    animation: orbitRotate 25s linear infinite;
+}
+
+.orbit::before,
+.orbit::after {
+    content: "";
+    position: absolute;
+    width: 7px;
+    height: 7px;
+    background: #111;
+    border-radius: 50%;
+}
+
+.orbit::before {
+    top: 30px;
+    left: 50%;
+}
+
+.orbit::after {
+    bottom: 70px;
+    right: 30px;
+}
+
+@keyframes orbitRotate {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+
+/* =========================================================
+   PIANO
+========================================================= */
+
+.piano-section {
+    padding: 130px 6vw;
+    position: relative;
+    overflow: hidden;
+}
+
+.section-label {
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    color: #888;
+    margin-bottom: 25px;
+}
+
+.piano-title {
+    font-size: clamp(40px, 6vw, 85px);
+    letter-spacing: -4px;
+    line-height: .95;
+    max-width: 700px;
+}
+
+.piano-title span {
+    color: #999;
+}
+
+.piano-wrapper {
+    margin-top: 90px;
+    position: relative;
+    perspective: 1000px;
+}
+
+.piano {
+    height: 220px;
+    max-width: 1100px;
+    margin: auto;
+    display: flex;
+    position: relative;
+    transform: rotateX(8deg);
+    filter: drop-shadow(0 35px 35px rgba(0,0,0,.15));
+}
+
+.white-key {
+    flex: 1;
+    height: 220px;
+    background: linear-gradient(
+        to bottom,
+        #fff 0%,
+        #f9f9f9 75%,
+        #e8e8e8 100%
+    );
+    border: 1px solid #d5d5d5;
+    border-radius: 0 0 6px 6px;
+    position: relative;
+    transition: .15s;
+}
+
+.white-key:hover,
+.white-key.active {
+    transform: translateY(5px);
+    background: #f0f0f0;
+}
+
+.black-key {
+    position: absolute;
+    top: 0;
+    width: 42px;
+    height: 135px;
+    background: linear-gradient(
+        to bottom,
+        #222,
+        #000
+    );
+    border-radius: 0 0 5px 5px;
+    z-index: 5;
+    box-shadow: 0 8px 12px rgba(0,0,0,.3);
+    cursor: pointer;
+    transition: .15s;
+}
+
+.black-key:hover,
+.black-key.active {
+    transform: translateY(5px);
+    background: #333;
+}
+
+.black-1 { left: 6.2%; }
+.black-2 { left: 12.8%; }
+.black-3 { left: 25.7%; }
+.black-4 { left: 32.1%; }
+.black-5 { left: 38.5%; }
+.black-6 { left: 51.4%; }
+.black-7 { left: 57.8%; }
+.black-8 { left: 70.7%; }
+.black-9 { left: 77.1%; }
+.black-10 { left: 83.5%; }
+
+
+/* =========================================================
+   VISUAL CARDS
+========================================================= */
+
+.experience {
+    padding: 140px 6vw;
+    background: #fafafa;
+}
+
+.experience-grid {
+    margin-top: 70px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
+}
+
+.exp-card {
+    min-height: 420px;
+    border-radius: 25px;
+    background: #fff;
+    border: 1px solid #eee;
+    padding: 35px;
+    position: relative;
+    overflow: hidden;
+    transition: transform .5s, box-shadow .5s;
+}
+
+.exp-card:hover {
+    transform: translateY(-12px);
+    box-shadow: 0 30px 70px rgba(0,0,0,.08);
+}
+
+.exp-number {
+    font-size: 12px;
+    color: #999;
+}
+
+.exp-card h3 {
+    position: absolute;
+    bottom: 35px;
+    left: 35px;
+    font-size: 27px;
+    letter-spacing: -1px;
+}
+
+.exp-icon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    font-size: 100px;
+    opacity: .12;
+    transition: .6s;
+}
+
+.exp-card:hover .exp-icon {
+    transform: translate(-50%,-50%) scale(1.25) rotate(10deg);
+    opacity: .25;
+}
+
+
+/* =========================================================
+   VIDEO
+========================================================= */
+
+.video-section {
+    padding: 140px 6vw;
+}
+
+.video-container {
+    margin-top: 60px;
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.video-box {
+    aspect-ratio: 16 / 9;
+    background: #111;
+    border-radius: 25px;
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.video-circle {
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    border: 1px solid rgba(255,255,255,.6);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 25px;
+    transition: .4s;
+}
+
+.video-box:hover .video-circle {
+    transform: scale(1.2);
+    background: #fff;
+    color: #111;
+}
+
+.video-caption {
+    margin-top: 20px;
+    font-size: 13px;
+    color: #777;
+}
+
+
+/* =========================================================
+   CTA
+========================================================= */
+
+.cta {
+    min-height: 75vh;
+    padding: 120px 6vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.cta h2 {
+    font-size: clamp(55px, 9vw, 130px);
+    letter-spacing: -7px;
+    line-height: .85;
+}
+
+.cta h2 span {
+    display: block;
+    color: transparent;
+    -webkit-text-stroke: 1px #111;
+}
+
+.cta-button {
+    display: inline-block;
+    margin-top: 50px;
+    padding: 18px 35px;
+    background: #111;
+    color: white;
+    border-radius: 50px;
+    font-size: 14px;
+    transition: .3s;
+}
+
+.cta-button:hover {
+    transform: scale(1.06);
+    box-shadow: 0 20px 50px rgba(0,0,0,.2);
+}
+
+
+/* =========================================================
+   FOOTER
+========================================================= */
+
+footer {
+    padding: 35px 6vw;
+    border-top: 1px solid #eee;
+    display: flex;
+    justify-content: space-between;
+    font-size: 12px;
+    color: #777;
+}
+
+
+/* =========================================================
+   SCROLL REVEAL
+========================================================= */
+
+.reveal {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 1s ease, transform 1s ease;
+}
+
+.reveal.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+/* =========================================================
+   MAGNETIC EFFECT
+========================================================= */
+
+.magnetic {
+    transition: transform .2s ease;
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 800px) {
+
+    .navbar {
+        padding: 0 20px;
+    }
+
+    .nav-links {
+        display: none;
+    }
+
+    .nav-button {
+        padding: 9px 15px;
+    }
+
+    .hero {
+        padding: 120px 20px 70px;
+    }
+
+    .hero h1 {
+        letter-spacing: -4px;
+    }
+
+    .hero-description {
+        font-size: 14px;
+    }
+
+    .orbit {
+        width: 320px;
+        height: 320px;
+    }
+
+    .piano-section,
+    .experience,
+    .video-section,
+    .cta {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .piano {
+        height: 130px;
+    }
+
+    .white-key {
+        height: 130px;
+    }
+
+    .black-key {
+        width: 22px;
+        height: 80px;
+    }
+
+    .experience-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .exp-card {
+        min-height: 320px;
+    }
+
+    .cta h2 {
+        letter-spacing: -4px;
+    }
+
+    footer {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .cursor,
+    .cursor-ring {
+        display: none;
+    }
+}
+
+</style>
+</head>
+
+
+<body>
+
+
+<!-- =====================================================
+     CURSOR
+===================================================== -->
+
+<div class="cursor"></div>
+<div class="cursor-ring"></div>
+
+
+<!-- =====================================================
+     NAVBAR
+===================================================== -->
+
+<nav class="navbar">
+
+    <div class="logo">
+        Pulkit <span>Music Class</span>
+    </div>
+
+    <div class="nav-links">
+        <a href="#home">Home</a>
+        <a href="#piano">Piano</a>
+        <a href="#experience">Classes</a>
+        <a href="#contact">Contact</a>
+    </div>
+
+    <a href="#contact" class="nav-button magnetic">
+        Start Learning
+    </a>
+
+</nav>
+
+
+<!-- =====================================================
+     HERO
+===================================================== -->
+
+<section class="hero" id="home">
+
+    <div class="orbit"></div>
+
+    <div class="note note-1">♪</div>
+    <div class="note note-2">♫</div>
+    <div class="note note-3">♩</div>
+    <div class="note note-4">♬</div>
+
+    <div class="hero-content reveal">
+
+        <div class="eyebrow">
+            Online Piano Learning
+        </div>
+
+        <h1>
+            PLAY<br>
+            <span class="outline">YOUR</span><br>
+            SOUND.
+        </h1>
+
+        <p class="hero-description">
+            Learn piano online with simple, practical and
+            enjoyable lessons designed for beginners.
+        </p>
+
+        <div class="hero-actions">
+
+            <a href="#contact" class="primary-btn magnetic">
+                Book a Class
+            </a>
+
+            <a href="#piano" class="secondary-btn">
+                Explore
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     PIANO
+===================================================== -->
+
+<section class="piano-section" id="piano">
+
+    <div class="section-label reveal">
+        Your Instrument
+    </div>
+
+    <h2 class="piano-title reveal">
+        One key.<br>
+        One sound.<br>
+        <span>Endless possibilities.</span>
+    </h2>
+
+
+    <div class="piano-wrapper reveal">
+
+        <div class="piano">
+
+            <!-- White Keys -->
+
+            <div class="white-key" data-note="C"></div>
+            <div class="white-key" data-note="D"></div>
+            <div class="white-key" data-note="E"></div>
+            <div class="white-key" data-note="F"></div>
+            <div class="white-key" data-note="G"></div>
+            <div class="white-key" data-note="A"></div>
+            <div class="white-key" data-note="B"></div>
+            <div class="white-key" data-note="C"></div>
+            <div class="white-key" data-note="D"></div>
+            <div class="white-key" data-note="E"></div>
+            <div class="white-key" data-note="F"></div>
+            <div class="white-key" data-note="G"></div>
+
+            <!-- Black Keys -->
+
+            <div class="black-key black-1"></div>
+            <div class="black-key black-2"></div>
+            <div class="black-key black-3"></div>
+            <div class="black-key black-4"></div>
+            <div class="black-key black-5"></div>
+            <div class="black-key black-6"></div>
+            <div class="black-key black-7"></div>
+            <div class="black-key black-8"></div>
+            <div class="black-key black-9"></div>
+            <div class="black-key black-10"></div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     EXPERIENCE
+===================================================== -->
+
+<section class="experience" id="experience">
+
+    <div class="section-label reveal">
+        The Experience
+    </div>
+
+    <div class="experience-grid">
+
+        <div class="exp-card reveal">
+
+            <span class="exp-number">01</span>
+
+            <div class="exp-icon">
+                ♫
+            </div>
+
+            <h3>
+                Learn at<br>
+                Your Pace
+            </h3>
+
+        </div>
+
+
+        <div class="exp-card reveal">
+
+            <span class="exp-number">02</span>
+
+            <div class="exp-icon">
+                ♩
+            </div>
+
+            <h3>
+                Build Your<br>
+                Musical Skills
+            </h3>
+
+        </div>
+
+
+        <div class="exp-card reveal">
+
+            <span class="exp-number">03</span>
+
+            <div class="exp-icon">
+                ♪
+            </div>
+
+            <h3>
+                Play Songs<br>
+                You Love
+            </h3>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     VIDEO
+===================================================== -->
+
+<section class="video-section">
+
+    <div class="section-label reveal">
+        Learn. Play. Repeat.
+    </div>
+
+    <h2 class="piano-title reveal">
+        Watch.<br>
+        Practice.<br>
+        <span>Play.</span>
+    </h2>
+
+    <div class="video-container reveal">
+
+        <a
+            href="https://www.youtube.com/"
+            target="_blank"
+            class="video-box"
+        >
+
+            <div class="video-circle">
+                ▶
+            </div>
+
+        </a>
+
+        <div class="video-caption">
+            Explore piano lessons and musical tutorials.
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     CTA
+===================================================== -->
+
+<section class="cta" id="contact">
+
+    <div>
+
+        <div class="section-label reveal">
+            Your Musical Journey
+        </div>
+
+        <h2 class="reveal">
+            READY TO<br>
+            <span>PLAY?</span>
+        </h2>
+
+        <a
+            href="https://wa.me/91XXXXXXXXXX"
+            target="_blank"
+            class="cta-button magnetic"
+        >
+            Book Your Class →
+        </a>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     FOOTER
+===================================================== -->
+
+<footer>
+
+    <div>
+        © 2026 Pulkit Music Class
+    </div>
+
+    <div>
+        Online Piano Classes
+    </div>
+
+</footer>
+
+
+
+<script>
+
+/* =========================================================
+   CUSTOM CURSOR
+========================================================= */
+
+const cursor = document.querySelector(".cursor");
+const cursorRing = document.querySelector(".cursor-ring");
+
+document.addEventListener("mousemove", function(e) {
+
+    cursor.style.left = e.clientX + "px";
+    cursor.style.top = e.clientY + "px";
+
+    cursorRing.style.left = e.clientX + "px";
+    cursorRing.style.top = e.clientY + "px";
+
+});
+
+
+/* Cursor hover */
+
+document.querySelectorAll("a, button, .white-key, .black-key")
+.forEach(element => {
+
+    element.addEventListener("mouseenter", () => {
+        document.body.classList.add("cursor-hover");
+    });
+
+    element.addEventListener("mouseleave", () => {
+        document.body.classList.remove("cursor-hover");
+    });
+
+});
+
+
+/* =========================================================
+   SCROLL REVEAL
+========================================================= */
+
+const revealElements =
+document.querySelectorAll(".reveal");
+
+const revealObserver =
+new IntersectionObserver(
+
+    function(entries) {
+
+        entries.forEach(entry => {
+
+            if(entry.isIntersecting) {
+
+                entry.target.classList.add("visible");
+
+                revealObserver.unobserve(entry.target);
+
+            }
+
+        });
+
+    },
+
+    {
+        threshold: 0.15
+    }
+
+);
+
+revealElements.forEach(element => {
+
+    revealObserver.observe(element);
+
+});
+
+
+/* =========================================================
+   PIANO INTERACTION
+========================================================= */
+
+const whiteKeys =
+document.querySelectorAll(".white-key");
+
+const blackKeys =
+document.querySelectorAll(".black-key");
+
+
+/* Piano sound using Web Audio */
+
+let audioContext;
+
+function playTone(frequency) {
+
+    if(!audioContext) {
+
+        audioContext =
+        new (window.AudioContext ||
+        window.webkitAudioContext)();
+
+    }
+
+    const oscillator =
+    audioContext.createOscillator();
+
+    const gain =
+    audioContext.createGain();
+
+    oscillator.type = "sine";
+
+    oscillator.frequency.value =
+    frequency;
+
+    gain.gain.setValueAtTime(
+        0.0001,
+        audioContext.currentTime
+    );
+
+    gain.gain.exponentialRampToValueAtTime(
+        0.25,
+        audioContext.currentTime + 0.01
+    );
+
+    gain.gain.exponentialRampToValueAtTime(
+        0.0001,
+        audioContext.currentTime + 0.8
+    );
+
+    oscillator.connect(gain);
+
+    gain.connect(audioContext.destination);
+
+    oscillator.start();
+
+    oscillator.stop(
+        audioContext.currentTime + 0.8
+    );
+
+}
+
+
+/* White key notes */
+
+const frequencies = [
+    261.63,
+    293.66,
+    329.63,
+    349.23,
+    392.00,
+    440.00,
+    493.88,
+    523.25,
+    587.33,
+    659.25,
+    698.46,
+    783.99
+];
+
+
+whiteKeys.forEach((key,index) => {
+
+    key.addEventListener("click", function() {
+
+        key.classList.add("active");
+
+        playTone(frequencies[index]);
+
+        setTimeout(() => {
+
+            key.classList.remove("active");
+
+        },150);
+
+    });
+
+});
+
+
+/* Black keys */
+
+const blackFrequencies = [
+    277.18,
+    311.13,
+    369.99,
+    415.30,
+    466.16,
+    554.37,
+    622.25,
+    739.99,
+    830.61,
+    932.33
+];
+
+
+blackKeys.forEach((key,index) => {
+
+    key.addEventListener("click", function() {
+
+        key.classList.add("active");
+
+        playTone(blackFrequencies[index]);
+
+        setTimeout(() => {
+
+            key.classList.remove("active");
+
+        },150);
+
+    });
+
+});
+
+
+/* =========================================================
+   MAGNETIC BUTTON EFFECT
+========================================================= */
+
+const magneticElements =
+document.querySelectorAll(".magnetic");
+
+magneticElements.forEach(element => {
+
+    element.addEventListener("mousemove", function(e) {
+
+        const rect =
+        element.getBoundingClientRect();
+
+        const x =
+        e.clientX - rect.left - rect.width / 2;
+
+        const y =
+        e.clientY - rect.top - rect.height / 2;
+
+        element.style.transform =
+        `translate(${x * .18}px, ${y * .18}px)`;
+
+    });
+
+    element.addEventListener("mouseleave", function() {
+
+        element.style.transform =
+        "translate(0,0)";
+
+    });
+
+});
+
+
+/* =========================================================
+   PARALLAX NOTES
+========================================================= */
+
+document.addEventListener("mousemove", function(e) {
+
+    const x =
+    (e.clientX / window.innerWidth - .5);
+
+    const y =
+    (e.clientY / window.innerHeight - .5);
+
+    document.querySelectorAll(".note")
+    .forEach((note,index) => {
+
+        const speed =
+        (index + 1) * 8;
+
+        note.style.transform =
+        `translate(${x * speed}px,
+        ${y * speed}px)`;
+
+    });
+
+});
+
+
+/* =========================================================
+   KEYBOARD PIANO
+========================================================= */
+
+const keyboardMap = {
+
+    "a": 0,
+    "s": 1,
+    "d": 2,
+    "f": 3,
+    "g": 4,
+    "h": 5,
+    "j": 6,
+    "k": 7,
+    "l": 8
+
+};
+
+
+document.addEventListener("keydown", function(e) {
+
+    const index =
+    keyboardMap[e.key.toLowerCase()];
+
+    if(index === undefined) return;
+
+    const key =
+    whiteKeys[index];
+
+    if(!key) return;
+
+    key.classList.add("active");
+
+    playTone(frequencies[index]);
+
+});
+
+
+document.addEventListener("keyup", function(e) {
+
+    const index =
+    keyboardMap[e.key.toLowerCase()];
+
+    if(index === undefined) return;
+
+    const key =
+    whiteKeys[index];
+
+    if(key) {
+
+        key.classList.remove("active");
+
+    }
+
+});
+
+
+/* =========================================================
+   SMOOTH ANCHOR SCROLL
+========================================================= */
+
+document.querySelectorAll('a[href^="#"]')
+.forEach(link => {
+
+    link.addEventListener("click", function(e) {
+
+        const target =
+        document.querySelector(
+            this.getAttribute("href")
+        );
+
+        if(!target) return;
+
+        e.preventDefault();
+
+        target.scrollIntoView({
+            behavior: "smooth"
+        });
+
+    });
+
+});
+
+</script>
+
+</body>
+</html>
